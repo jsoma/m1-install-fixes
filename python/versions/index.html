@@ -1,0 +1,512 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
+    
+    
+      
+        <title>Python Versions - M1 Install Fixes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bdf02c5.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f48eb1a4.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-5541738-17","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-310-m1-issues-switch-to-older-more-stable-python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="M1 Install Fixes" class="md-header__button md-logo" aria-label="M1 Install Fixes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            M1 Install Fixes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python Versions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jsoma/m1-install-fixes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jsoma/m1-install-fixes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="M1 Install Fixes" class="md-nav__button md-logo" aria-label="M1 Install Fixes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    M1 Install Fixes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jsoma/m1-install-fixes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jsoma/m1-install-fixes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scipy/" class="md-nav__link">
+        Scipy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python Versions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python Versions
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    Intro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-fix-it" class="md-nav__link">
+    How to fix it
+  </a>
+  
+    <nav class="md-nav" aria-label="How to fix it">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleaning-house" class="md-nav__link">
+    Cleaning house
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-our-default-python" class="md-nav__link">
+    Changing our default Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reinstalling-jupyterconnecting-it-to-python-397" class="md-nav__link">
+    Reinstalling Jupyter/Connecting it to Python 3.9.7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-some-more-libraries" class="md-nav__link">
+    Installing some more libraries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-out-jupyter" class="md-nav__link">
+    Testing out Jupyter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+
+
+
+                
+<a href="https://github.com/jsoma/m1-install-fixes/edit/master/docs/python/versions.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="python-310-m1-issues-switch-to-older-more-stable-python">Python 3.10 M1 issues? Switch to older, more stable Python!<a class="headerlink" href="#python-310-m1-issues-switch-to-older-more-stable-python" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Fix for: Python 3.10 has errors on M1 Macs/new OS X installing Jupyter, pandas, matplotlib, or other libraries</p>
+</blockquote>
+<h2 id="intro">Intro<a class="headerlink" href="#intro" title="Permanent link">&para;</a></h2>
+<p>When you install Python packages, there are <strong>two ways they can be installed:</strong></p>
+<ul>
+<li>Ready-made versions that work with your computer called "wheels." They come straight from the internet! It takes like two seconds to install!</li>
+<li>You download a bunch of code that then gets turned into a library. This is "compiling" or "building" the wheel.</li>
+</ul>
+<p>You don't make this decision – pip does! If there's a ready-made version, it uses that. If not, your computer builds it. If you have a super-new computer or are using a super-new version of Python, there might not be a wheel so your computer has to compile its own.</p>
+<p>Sometimes your computer <em>can't</em> build it, though. It might be that you need more software installed, or the version of the library doesn't work with your kind of computer, or the library just hasn't gotten support for the Python version yet.</p>
+<p><strong>The easiest solution is to use an older version of Python and try to install again.</strong></p>
+<p>For example, maybe we're using 3.10.0. It's a new Python, maybe matplotlib doesn't have a wheel! We can't build the wheel for WHO KNOWS WHY: NO ONE KNOWS. Could be a thousand reasons. So instead, we'll switch to an earlier version of Python that has pandas/matplotlib/requests wheels (or ones that we can build successfully) and we'll be good to go.</p>
+<p>This is why <code>pyenv</code> rules. It allows you to easily install and switch between Python versions.</p>
+<h2 id="how-to-fix-it">How to fix it<a class="headerlink" href="#how-to-fix-it" title="Permanent link">&para;</a></h2>
+<h3 id="cleaning-house">Cleaning house<a class="headerlink" href="#cleaning-house" title="Permanent link">&para;</a></h3>
+<p>First, <strong>CLOSE ALL OF YOUR TERMINALS</strong>. Make sure there are non that are minimized! We're doing this to make sure that we don't have any Python 3.10.0 Jupyter notebook servers floating around.</p>
+<h3 id="changing-our-default-python">Changing our default Python<a class="headerlink" href="#changing-our-default-python" title="Permanent link">&para;</a></h3>
+<p>Now let's install abandon Python 3.10.0! We'll use <code>pyenv</code> to <strong>install Python 3.9.7</strong> and <strong>set it as the default Python version</strong>.</p>
+<blockquote>
+<p>Remember: Don't include the <code>$</code> in your command!</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ pyenv install <span class="m">3</span>.9.7
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ pyenv global <span class="m">3</span>.9.7
+</code></pre></div>
+<p>The first one might take a while to download and install 3.9.7, but it'll finish up eventually.</p>
+<h3 id="reinstalling-jupyterconnecting-it-to-python-397">Reinstalling Jupyter/Connecting it to Python 3.9.7<a class="headerlink" href="#reinstalling-jupyterconnecting-it-to-python-397" title="Permanent link">&para;</a></h3>
+<p>Previously we were using Jupyter with Python 3.10.0. Now we need to <strong>hook Jupyter into Python 3.9.7</strong>.</p>
+<p>First, check to make sure you're using Python 3.9.7:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ python --version
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Python <span class="m">3</span>.9.7
+</code></pre></div>
+<p>If it does't say 3.9.7, run the <code>pyenv</code> commands above again.</p>
+<p>Now we can <strong>install Jupyter</strong>...</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ pip install jupyter
+</code></pre></div>
+<p>...then we can <strong>connect Jupyter to the new version of Python</strong>. The Jupyter-Python connection is called a "kernel," and these commands make sure our Python 3 kernel (aka Jupyter's Python) is the same Python as <code>python</code> on the command line.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ python -m pip install ipykernel
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$ python -m ipykernel install --user
+</code></pre></div>
+<h3 id="installing-some-more-libraries">Installing some more libraries<a class="headerlink" href="#installing-some-more-libraries" title="Permanent link">&para;</a></h3>
+<p>We were having problems installing pandas and matplotlib before on some of our computers. <strong>Let's try installing these libraries</strong> on the command line right now – along with a few other common libraries – just to be sure we don't get any errors.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ pip install pandas matplotlib requests beautifulsoup4 pg8000
+</code></pre></div>
+<p>If you get an error here, try installing them one at a time. Which one gives the error?</p>
+<h3 id="testing-out-jupyter">Testing out Jupyter<a class="headerlink" href="#testing-out-jupyter" title="Permanent link">&para;</a></h3>
+<p>Now that we've installed a new Python, installed Jupyter, and connected Jupyter to the new Python, we can try to run Jupyter notebook.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ jupyter notebook
+</code></pre></div>
+<p>When it opens up, select <strong>New</strong> and then <strong>Python 3 (ipykernel)</strong>. This will connect us to our newly installed Python.</p>
+<p>Now we can run some Python code to check our installation. Let's make sure our <strong>imports work</strong> and our libraries were installed correctly...</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">requests</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+<p>...then make sure our <strong>pandas is good to go</strong>...</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="p">{</span> <span class="s1">&#39;col1&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;col2&#39;</span><span class="p">:</span> <span class="mi">8</span> <span class="p">},</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="p">{</span> <span class="s1">&#39;col1&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;col2&#39;</span><span class="p">:</span> <span class="mi">12</span> <span class="p">},</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="p">{</span> <span class="s1">&#39;col1&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;col2&#39;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">},</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">])</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">df</span>
+</code></pre></div>
+<p>...then make sure our <strong>matplotlib is functional</strong>...</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;col2&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>        <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;It works!!!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>...and then we're all set!</p>
+
+              
+
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../scipy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Scipy" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Scipy
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 Jonathan Soma
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.61edd562.min.js"></script>
+      
+    
+  </body>
+</html>
