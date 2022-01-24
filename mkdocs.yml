@@ -1,19 +1,13 @@
-site_name: Plotnine tutorials for Python people
+site_name: M1 Install Fixes
 repo_url: https://github.com/jsoma/m1-install-fixes
 repo_name: jsoma/m1-install-fixes
 edit_uri: edit/master/docs/
 copyright: Copyright &copy; 2022 Jonathan Soma
 nav:
   - Home: index.md
-  - Basic charts:
-    - Bar graph: chart-types/bar-graph.ipynb
-    - Line charts: chart-types/line-chart.ipynb
-    - Scatterplot: chart-types/scatterplot.ipynb
-  - Text:
-    - Change fonts: text/change-fonts.ipynb
-    - Available fonts: text/print-list.ipynb
-    - Add titles: text/titles.ipynb
-    - Chinese/Japanese/Korean text: text/cjk-text.ipynb
+  - Python:
+    - Scipy: python/scipy.md
+    - Python Versions: python/versions.md
 extra_css:
   - stylesheets/extra.css
 extra:

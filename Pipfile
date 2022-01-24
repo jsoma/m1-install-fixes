@@ -6,8 +6,6 @@ name = "pypi"
 [packages]
 mkdocs-material = "*"
 mkdocs-jupyter = "*"
-mkdocs-material-extensions = "*"
-mkdocs = "*"
 
 [dev-packages]
 
