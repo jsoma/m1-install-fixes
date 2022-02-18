@@ -8,6 +8,7 @@ nav:
   - Python:
     - Scipy: python/scipy.md
     - Python Versions: python/versions.md
+    - Ghostscript with Camelot: python/ghostscript.md
 extra_css:
   - stylesheets/extra.css
 extra:
