@@ -8,19 +8,19 @@
       
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
     
     
       
-        <title>M1 Install Fixes</title>
+        <title>Ghostscript with Camelot - M1 Install Fixes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.3bdf02c5.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bdf02c5.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.f48eb1a4.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f48eb1a4.min.css">
         
       
     
@@ -34,9 +34,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#m1-installation-fixes" class="md-skip">
+        <a href="#getting-ghostscript-to-work-with-python-camelot-os-x" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +84,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="M1 Install Fixes" class="md-header__button md-logo" aria-label="M1 Install Fixes" data-md-component="logo">
+    <a href="../.." title="M1 Install Fixes" class="md-header__button md-logo" aria-label="M1 Install Fixes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Ghostscript with Camelot
             
           </span>
         </div>
@@ -151,7 +151,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="M1 Install Fixes" class="md-nav__button md-logo" aria-label="M1 Install Fixes" data-md-component="logo">
+    <a href="../.." title="M1 Install Fixes" class="md-nav__button md-logo" aria-label="M1 Install Fixes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -180,21 +180,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
-      
     </li>
   
 
@@ -205,14 +195,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -243,7 +235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/scipy/" class="md-nav__link">
+      <a href="../scipy/" class="md-nav__link">
         Scipy
       </a>
     </li>
@@ -257,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/versions/" class="md-nav__link">
+      <a href="../versions/" class="md-nav__link">
         Python Versions
       </a>
     </li>
@@ -269,11 +261,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="python/ghostscript/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Ghostscript with Camelot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Ghostscript with Camelot
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-solution-that-works" class="md-nav__link">
+    A solution that works
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answers-that-do-not-work" class="md-nav__link">
+    Answers that do not work
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -300,17 +340,44 @@
 
 
                 
-<a href="https://github.com/jsoma/m1-install-fixes/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/jsoma/m1-install-fixes/edit/master/docs/python/ghostscript.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="m1-installation-fixes">M1 Installation Fixes<a class="headerlink" href="#m1-installation-fixes" title="Permanent link">&para;</a></h1>
-<p>A lot of things are broken with M1 macs. This is where I keep track of how to fix everything.</p>
-<ul>
-<li><a href="python/scipy/">Installing scipy</a></li>
-<li><a href="python/versions/">Downgrading Python versions</a></li>
-</ul>
+<h1 id="getting-ghostscript-to-work-with-python-camelot-os-x">Getting ghostscript to work with Python (camelot, OS X)<a class="headerlink" href="#getting-ghostscript-to-work-with-python-camelot-os-x" title="Permanent link">&para;</a></h1>
+<p>When you try to use the camelot Python library, you might get the error message <code>Please make sure that Ghostscript is installed</code> even though ghostscript is installed! <a href="https://camelot-py.readthedocs.io/en/master/user/install-deps.html#for-ghostscript">The camelot docs give some tips</a> but they didn't work for me.</p>
+<h2 id="a-solution-that-works">A solution that works<a class="headerlink" href="#a-solution-that-works" title="Permanent link">&para;</a></h2>
+<p>To solve this problem, we're going to create links from our ghostscript to the place camelot thinks ghostscript should be. We aren't moving it, we aren't copying it, we're just adding a little redirect that says "no, look for ghostscript in this other place!"</p>
+<p>First, make sure you have ghostscript installed via homebrew.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>brew install ghostscript
+</code></pre></div>
+<p>After you install ghostscript (or if it's already installed), run the following command to find out what version of ghostscript you have.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>brew list --versions ghostscript
+</code></pre></div>
+<p>Mine is listed as <strong>ghostscript 9.55.0</strong>. To create the link between the <code>9.55.0</code> location and the location camelot wants ghostscript to be in, you'll run the command below. If you have a different version you'll need to edit the command.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo ln -s /opt/homebrew/Cellar/ghostscript/9.55.0/lib/libgs.dylib.9.55 /usr/local/lib/libgs.9.dylib
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo ln -s /opt/homebrew/Cellar/ghostscript/9.55.0/lib/libgs.dylib.9.55 /usr/local/lib/libgs.dylib
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>sudo ln -s /opt/homebrew/Cellar/ghostscript/9.55.0/lib/libgs.dylib.9.55 /usr/local/lib/libgs.dylib.9.55
+</code></pre></div>
+<p>And then you're good to go! Go forth and use <code>.read_pdf</code> to read pdfs.</p>
+<h2 id="answers-that-do-not-work">Answers that do not work<a class="headerlink" href="#answers-that-do-not-work" title="Permanent link">&para;</a></h2>
+<p>When reading through <a href="https://github.com/atlanhq/camelot/issues/184">this GitHub thread</a> I found a number of answers that didn't work!</p>
+<p>First, this is how camelot tries to find ghostscript. Since it can't find it, it obviously doesn't work.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>import ctypes
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ctypes.util.find_library(&quot;gs&quot;)
+</code></pre></div>
+<p>Then some people said hey, use <code>distutils</code>, it can find ghostscript! Not for me, though.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>import distutils.spawn
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>distutils.spawn.find_executable(&quot;gs&quot;)
+</code></pre></div>
+<p>And finally some people suggested adding library paths to your Jupyter notebook, which you do with <code>%env</code>. That also didn't work!</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>%env DYLD_LIBRARY_PATH=&quot;/opt/homebrew/lib&quot;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>import ctypes
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>ctypes.util.find_library(&quot;gs&quot;)
+</code></pre></div>
 
               
 
@@ -329,21 +396,21 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-      
         
-        <a href="python/scipy/" class="md-footer__link md-footer__link--next" aria-label="Next: Scipy" rel="next">
+        <a href="../versions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Python Versions" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Next
+                Previous
               </span>
-              Scipy
+              Python Versions
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   
@@ -371,10 +438,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="assets/javascripts/bundle.61edd562.min.js"></script>
+      <script src="../../assets/javascripts/bundle.61edd562.min.js"></script>
       
     
   </body>
