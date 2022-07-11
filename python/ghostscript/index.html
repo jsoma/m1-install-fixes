@@ -355,10 +355,14 @@
 <p>After you install ghostscript (or if it's already installed), run the following command to find out what version of ghostscript you have.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>brew list --versions ghostscript
 </code></pre></div>
-<p>Mine is listed as <strong>ghostscript 9.55.0</strong>. To create the link between the <code>9.55.0</code> location and the location camelot wants ghostscript to be in, you'll run the command below. If you have a different version you'll need to edit the command.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo ln -s /opt/homebrew/Cellar/ghostscript/9.55.0/lib/libgs.dylib.9.55 /usr/local/lib/libgs.9.dylib
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo ln -s /opt/homebrew/Cellar/ghostscript/9.55.0/lib/libgs.dylib.9.55 /usr/local/lib/libgs.dylib
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>sudo ln -s /opt/homebrew/Cellar/ghostscript/9.55.0/lib/libgs.dylib.9.55 /usr/local/lib/libgs.dylib.9.55
+<p>Mine is listed as <strong>ghostscript 9.56.1</strong>. To create the link between the <code>9.56.1</code> location and the location camelot wants ghostscript to be in, you'll run the command below. If you have a different version you'll need to edit the command.</p>
+<blockquote>
+<p>We're using the <code>sudo</code> command below, which asks for big powerful control over your computer. When it asks for your password, don't worry that you can't see what's being typed. It's working!</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo mkdir -p /usr/local/lib
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo ln -s /opt/homebrew/Cellar/ghostscript/9.56.1/lib/libgs.dylib.9.56 /usr/local/lib/libgs.9.dylib
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>sudo ln -s /opt/homebrew/Cellar/ghostscript/9.56.1/lib/libgs.dylib.9.56 /usr/local/lib/libgs.dylib
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>sudo ln -s /opt/homebrew/Cellar/ghostscript/9.56.1/lib/libgs.dylib.9.56 /usr/local/lib/libgs.dylib.9.56
 </code></pre></div>
 <p>And then you're good to go! Go forth and use <code>.read_pdf</code> to read pdfs.</p>
 <h2 id="answers-that-do-not-work">Answers that do not work<a class="headerlink" href="#answers-that-do-not-work" title="Permanent link">&para;</a></h2>

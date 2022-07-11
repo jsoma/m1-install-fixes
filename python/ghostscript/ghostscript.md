@@ -18,12 +18,15 @@ After you install ghostscript (or if it's already installed), run the following 
 brew list --versions ghostscript
 ```
 
-Mine is listed as **ghostscript 9.55.0**. To create the link between the `9.55.0` location and the location camelot wants ghostscript to be in, you'll run the command below. If you have a different version you'll need to edit the command.
+Mine is listed as **ghostscript 9.56.1**. To create the link between the `9.56.1` location and the location camelot wants ghostscript to be in, you'll run the command below. If you have a different version you'll need to edit the command.
+
+> We're using the `sudo` command below, which asks for big powerful control over your computer. When it asks for your password, don't worry that you can't see what's being typed. It's working!
 
 ```
-sudo ln -s /opt/homebrew/Cellar/ghostscript/9.55.0/lib/libgs.dylib.9.55 /usr/local/lib/libgs.9.dylib
-sudo ln -s /opt/homebrew/Cellar/ghostscript/9.55.0/lib/libgs.dylib.9.55 /usr/local/lib/libgs.dylib
-sudo ln -s /opt/homebrew/Cellar/ghostscript/9.55.0/lib/libgs.dylib.9.55 /usr/local/lib/libgs.dylib.9.55
+sudo mkdir -p /usr/local/lib
+sudo ln -s /opt/homebrew/Cellar/ghostscript/9.56.1/lib/libgs.dylib.9.56 /usr/local/lib/libgs.9.dylib
+sudo ln -s /opt/homebrew/Cellar/ghostscript/9.56.1/lib/libgs.dylib.9.56 /usr/local/lib/libgs.dylib
+sudo ln -s /opt/homebrew/Cellar/ghostscript/9.56.1/lib/libgs.dylib.9.56 /usr/local/lib/libgs.dylib.9.56
 ```
 
 And then you're good to go! Go forth and use `.read_pdf` to read pdfs.
